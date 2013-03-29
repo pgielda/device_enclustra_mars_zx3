@@ -12,13 +12,22 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product, build/target/product/mini.mk)
+$(call inherit-product, build/target/product/full.mk)
 
-PRODUCT_NAME := mini_armv7a_neon
-PRODUCT_DEVICE := armv7-a-neon
+PRODUCT_PACKAGES += gralloc.zynq hwcomposer.zynq
+## PRODUCT_PACKAGES += busybox
+
+PRODUCT_NAME := mars-zx3
+TARGET_BOOTLOADER_BOARD_NAME := zynq
+TARGET_BOARD_PLATFORM := zynq
+
+PRODUCT_DEVICE := mars-zx3
 PRODUCT_BRAND := Android
-PRODUCT_MODEL := Mini for armv7-a-neon
+PRODUCT_MODEL := Enclustra Mars ZX3
 
 # default is nosdcard, S/W button enabled in resource
 DEVICE_PACKAGE_OVERLAYS := device/generic/armv7-a-neon/overlay
 PRODUCT_CHARACTERISTICS := nosdcard
+
+PRODUCT_COPY_FILES := \
+	device/xilinx/mars-zx3/init.xilinxzynqplatform.rc:root/init.xilinxzynqplatform.rc
