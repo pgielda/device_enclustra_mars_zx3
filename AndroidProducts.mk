@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/mars-zx3.mk
+    $(LOCAL_DIR)/mars_zx3.mk
