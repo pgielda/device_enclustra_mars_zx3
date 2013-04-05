@@ -14,7 +14,8 @@
 
 $(call inherit-product, build/target/product/full.mk)
 
-PRODUCT_PACKAGES += gralloc.zynq hwcomposer.zynq
+PRODUCT_PACKAGES += gralloc.enclustra
+# hwcomposer.zynq
 ## PRODUCT_PACKAGES += busybox
 
 PRODUCT_NAME := mars_zx3
@@ -24,6 +25,14 @@ TARGET_BOARD_PLATFORM := zynq
 PRODUCT_DEVICE := mars_zx3
 PRODUCT_BRAND := Android
 PRODUCT_MODEL := Enclustra Mars ZX3
+
+# set density to 120 (ldpi)
+PRODUCT_PROPERTY_OVERRIDES += \
+        ro.sf.lcd_density=120
+
+# set ethernet as eth0
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.ethernet.interface=eth0
 
 # default is nosdcard, S/W button enabled in resource
 DEVICE_PACKAGE_OVERLAYS := device/generic/armv7-a-neon/overlay
