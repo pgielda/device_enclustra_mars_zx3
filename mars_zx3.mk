@@ -30,4 +30,9 @@ DEVICE_PACKAGE_OVERLAYS := device/generic/armv7-a-neon/overlay
 PRODUCT_CHARACTERISTICS := nosdcard
 
 PRODUCT_COPY_FILES := \
-	device/xilinx/mars_zx3/init.xilinxzynqplatform.rc:root/init.xilinxzynqplatform.rc
+	device/enclustra/mars_zx3/init.xilinxzynqplatform.rc:root/init.xilinxzynqplatform.rc \
+	device/enclustra/mars_zx3/vold.fstab:system/etc/vold.fstab \
+	frameworks/base/data/fonts/system_fonts.xml:system/etc/system_fonts.xml \
+	device/enclustra/mars_zx3/EP0700M06.idc:system/usr/idc/EP0700M06.idc
+
+
