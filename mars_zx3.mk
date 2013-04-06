@@ -26,7 +26,7 @@ PRODUCT_DEVICE := mars_zx3
 PRODUCT_BRAND := Android
 PRODUCT_MODEL := Enclustra Mars ZX3
 
-# set density to 120 (ldpi)
+# set density to 120 (ldpi) - needed for "tablet" mode
 PRODUCT_PROPERTY_OVERRIDES += \
         ro.sf.lcd_density=120
 
@@ -34,9 +34,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.ethernet.interface=eth0
 
-# default is nosdcard, S/W button enabled in resource
 DEVICE_PACKAGE_OVERLAYS := device/generic/armv7-a-neon/overlay
-PRODUCT_CHARACTERISTICS := nosdcard
+
+# tablet, no sd card
+PRODUCT_CHARACTERISTICS := tablet,nosdcard
 
 PRODUCT_COPY_FILES := \
 	device/enclustra/mars_zx3/init.xilinxzynqplatform.rc:root/init.xilinxzynqplatform.rc \
