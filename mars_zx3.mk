@@ -22,6 +22,10 @@ PRODUCT_NAME := mars_zx3
 TARGET_BOOTLOADER_BOARD_NAME := zynq
 TARGET_BOARD_PLATFORM := zynq
 
+# no kernel, no bootloader
+TARGET_NO_BOOTLOADER := true
+TARGET_NO_KERNEL := true
+
 PRODUCT_DEVICE := mars_zx3
 PRODUCT_BRAND := Android
 PRODUCT_MODEL := Enclustra Mars ZX3
@@ -30,9 +34,26 @@ PRODUCT_MODEL := Enclustra Mars ZX3
 PRODUCT_PROPERTY_OVERRIDES += \
         ro.sf.lcd_density=120
 
+# set number of gralloc framebuffers to 2
+PRODUCT_PROPERTY_OVERRIDES += \
+        debug.gr.numframebuffers=2
+
+
 # set ethernet as eth0
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.ethernet.interface=eth0
+
+# set sleep mode to 3 --> "wait for interrupt and ramp clock"
+PRODUCT_PROPERTY_OVERRIDES += \
+pm.sleep_mode=3
+
+# set heap size to 32 megs
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.heapsize=32m
+
+# turn off power collapse
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.ril.disable.power.collapse=0
 
 DEVICE_PACKAGE_OVERLAYS := device/generic/armv7-a-neon/overlay
 
