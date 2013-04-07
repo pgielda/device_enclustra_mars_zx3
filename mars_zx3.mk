@@ -45,17 +45,19 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # set sleep mode to 3 --> "wait for interrupt and ramp clock"
 PRODUCT_PROPERTY_OVERRIDES += \
-pm.sleep_mode=3
+        pm.sleep_mode=3
 
 # set heap size to 32 megs
 PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.heapsize=32m
+        dalvik.vm.heapsize=32m
 
 # turn off power collapse
 PRODUCT_PROPERTY_OVERRIDES += \
-ro.ril.disable.power.collapse=0
+        ro.ril.disable.power.collapse=0
 
-DEVICE_PACKAGE_OVERLAYS := device/generic/armv7-a-neon/overlay
+DEVICE_PACKAGE_OVERLAYS := \
+        device/generic/armv7-a-neon/overlay \
+        device/enclustra/mars_zx3/overlay
 
 # tablet, no sd card
 PRODUCT_CHARACTERISTICS := tablet,nosdcard
