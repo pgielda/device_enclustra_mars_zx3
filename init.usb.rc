@@ -3,6 +3,9 @@ on early-init
 
     export EXTERNAL_STORAGE /storage/sdcard0
     export SECONDARY_STORAGE /storage/sdcard1
+    
+    export EMULATED_STORAGE_SOURCE /mnt/shell/emulated
+    export EMULATED_STORAGE_TARGET /storage/emulated
 
     mkdir /storage 0755 system sdcard_r
     # symlink /data/media/sdcard0 /storage/sdcard0
@@ -20,7 +23,7 @@ on early-init
 on fs
     setprop ro.crypto.umount_sd false
     setprop ro.crypto.fuse_sdcard true
-    mount_all /fstab.xilinxzynqplatform
+    mount_all /fstab.usb
 
 on post-fs-data
     mkdir /data/misc/wifi 0770 wifi wifi
