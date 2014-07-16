@@ -72,3 +72,5 @@ PRODUCT_COPY_FILES := \
 	device/enclustra/mars_zx3/EP0700M06.idc:system/usr/idc/EP0700M06.idc
 
 
+LOCAL_POST_INSTALL_CMD := \
+    ln -sf /init /sbin/init
