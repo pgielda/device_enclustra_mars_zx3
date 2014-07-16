@@ -66,6 +66,7 @@ PRODUCT_CHARACTERISTICS := tablet,nosdcard
 
 PRODUCT_COPY_FILES := \
 	device/enclustra/mars_zx3/init.usb.rc:root/init.usb.rc \
+        device/enclustra/mars_zx3/fstab.usb:root/fstab.usb \
 	device/enclustra/mars_zx3/vold.fstab:system/etc/vold.fstab \
 	device/enclustra/mars_zx3/hide_cursor.sh:root/hide_cursor.sh \
 	device/enclustra/mars_zx3/EP0700M06.idc:system/usr/idc/EP0700M06.idc
