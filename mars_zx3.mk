@@ -65,12 +65,14 @@ DEVICE_PACKAGE_OVERLAYS := \
 PRODUCT_CHARACTERISTICS := tablet,nosdcard
 
 PRODUCT_COPY_FILES := \
-	device/enclustra/mars_zx3/init.usb.rc:root/init.usb.rc \
-        device/enclustra/mars_zx3/fstab.usb:root/fstab.usb \
-	device/enclustra/mars_zx3/vold.fstab:system/etc/vold.fstab \
-	device/enclustra/mars_zx3/hide_cursor.sh:root/hide_cursor.sh \
-	device/enclustra/mars_zx3/EP0700M06.idc:system/usr/idc/EP0700M06.idc
+	device/enclustra/mars_zx3/files/init.usb.rc:root/init.usb.rc \
+        device/enclustra/mars_zx3/files/fstab.usb:root/fstab.usb \
+	device/enclustra/mars_zx3/files/vold.fstab:system/etc/vold.fstab \
+	device/enclustra/mars_zx3/files/hide_cursor.sh:root/hide_cursor.sh \
+	device/enclustra/mars_zx3/files/init:root/sbin/init \
+	device/enclustra/mars_zx3/files/uinput:root/sbin/uintput \
+	device/enclustra/mars_zx3/files/EP0700M06.idc:system/usr/idc/EP0700M06.idc \
+        frameworks/base/data/fonts/fallback_fonts.xml:system/etc/fallback_fonts.xml \
+	frameworks/base/data/fonts/system_fonts.xml:system/etc/system_fonts.xml \
+	frameworks/base/data/fonts/vendor_fonts.xml:system/etc/vendor_fonts.xml
 
-
-LOCAL_POST_INSTALL_CMD := \
-    ln -sf /init /sbin/init
