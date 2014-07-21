@@ -15,7 +15,7 @@
 $(call inherit-product, build/target/product/full.mk)
 
 #PRODUCT_PACKAGES += gralloc.enclustra
-#PRODUCT_PACKAGES += drm_lights.antmicro
+PRODUCT_PACKAGES += drm_lights.antmicro
 #PRODUCT_PACKAGES += v4l2_camera.antmicro
 # hwcomposer.zynq
 ## PRODUCT_PACKAGES += busybox
