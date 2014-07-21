@@ -15,8 +15,8 @@
 $(call inherit-product, build/target/product/full.mk)
 
 #PRODUCT_PACKAGES += gralloc.enclustra
-PRODUCT_PACKAGES += drm_lights.antmicro
-PRODUCT_PACKAGES += v4l2_camera.antmicro
+#PRODUCT_PACKAGES += drm_lights.antmicro
+#PRODUCT_PACKAGES += v4l2_camera.antmicro
 # hwcomposer.zynq
 ## PRODUCT_PACKAGES += busybox
 
@@ -70,7 +70,7 @@ PRODUCT_COPY_FILES := \
 	device/enclustra/mars_zx3/files/vold.fstab:system/etc/vold.fstab \
 	device/enclustra/mars_zx3/files/hide_cursor.sh:root/hide_cursor.sh \
 	device/enclustra/mars_zx3/files/init:root/sbin/init \
-	device/enclustra/mars_zx3/files/uinput:root/sbin/uintput \
+	device/enclustra/mars_zx3/files/uinput:root/sbin/uinput \
 	device/enclustra/mars_zx3/files/EP0700M06.idc:system/usr/idc/EP0700M06.idc \
         frameworks/base/data/fonts/fallback_fonts.xml:system/etc/fallback_fonts.xml \
 	frameworks/base/data/fonts/system_fonts.xml:system/etc/system_fonts.xml \
