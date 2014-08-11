@@ -46,6 +46,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.ethernet.interface=eth0
 
+# no gpu to cpu
+PRODUCT_PROPERTY_OVERRIDES += \
+        ro.bq.gpu_to_cpu_unsupported=1
+
 # set sleep mode to 3 --> "wait for interrupt and ramp clock"
 PRODUCT_PROPERTY_OVERRIDES += \
         pm.sleep_mode=3
