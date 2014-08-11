@@ -78,6 +78,7 @@ PRODUCT_COPY_FILES := \
 	device/enclustra/mars_zx3/files/uinput:root/sbin/uinput \
 	device/enclustra/mars_zx3/files/EP0700M06.idc:system/usr/idc/EP0700M06.idc \
         frameworks/base/data/fonts/fallback_fonts.xml:system/etc/fallback_fonts.xml \
-	frameworks/base/data/fonts/system_fonts.xml:system/etc/system_fonts.xml
+	frameworks/base/data/fonts/system_fonts.xml:system/etc/system_fonts.xml \
+	device/enclustra/mars_zx3/files/egl.cfg:system/lib/egl/egl.cfg
 
 
