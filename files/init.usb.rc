@@ -62,7 +62,7 @@ service wakepoke /sbin/uinput
 	user root
 	group root
 
-service wakepoke /vendor/vendor.sh
+service vendor /vendor/vendor.sh
 	user root
 	group root
 	oneshot
